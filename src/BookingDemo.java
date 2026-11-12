@@ -12,7 +12,9 @@ public final class BookingDemo {
 
     /**
      * Runs a booking session. Input is one command per line.
-     * @param args unused command-line arguments
+     *
+     * @param args
+     *            unused command-line arguments
      */
     public static void main(String[] args) {
         final int rows = 3;

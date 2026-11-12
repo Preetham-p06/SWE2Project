@@ -33,6 +33,7 @@ public interface SeatMapKernel extends Standard<SeatMap> {
 
     /**
      * Reports the row count.
+     *
      * @return the number of rows
      * @ensures rows = this.rows and this = #this
      */
@@ -40,6 +41,7 @@ public interface SeatMapKernel extends Standard<SeatMap> {
 
     /**
      * Reports the number of seats in a row.
+     *
      * @return the number of seats per row
      * @ensures seatsPerRow = this.seatsPerRow and this = #this
      */
@@ -47,8 +49,13 @@ public interface SeatMapKernel extends Standard<SeatMap> {
 
     /**
      * Checks whether a seat is available.
-     * @param row one-based row number
-     * @param seat one-based seat number
+     *
+     * @param row
+     *            one-based row number
+     *
+     * @param seat
+     *            one-based seat number
+     *
      * @return true exactly when the seat is available
      * @requires 1 &lt;= row &lt;= this.rows and 1 &lt;= seat &lt;= this.seatsPerRow
      * @ensures isAvailable = ((row, seat) is not in this.reserved)
@@ -58,11 +65,16 @@ public interface SeatMapKernel extends Standard<SeatMap> {
 
     /**
      * Reserves an available seat.
-     * @param row one-based row number
-     * @param seat one-based seat number
+     *
+     * @param row
+     *            one-based row number
+     *
+     * @param seat
+     *            one-based seat number
      * @updates this
      * @requires 1 &lt;= row &lt;= this.rows and 1 &lt;= seat &lt;= this.seatsPerRow
      *           and (row, seat) is not in this.reserved
+     *
      * @ensures this = (#this.rows, #this.seatsPerRow,
      *                 #this.reserved union {(row, seat)})
      */
@@ -70,11 +82,16 @@ public interface SeatMapKernel extends Standard<SeatMap> {
 
     /**
      * Releases a reserved seat.
-     * @param row one-based row number
-     * @param seat one-based seat number
+     *
+     * @param row
+     *            one-based row number
+     *
+     * @param seat
+     *            one-based seat number
      * @updates this
      * @requires 1 &lt;= row &lt;= this.rows and 1 &lt;= seat &lt;= this.seatsPerRow
      *           and (row, seat) is in this.reserved
+     *
      * @ensures this = (#this.rows, #this.seatsPerRow,
      *                 #this.reserved minus {(row, seat)})
      */

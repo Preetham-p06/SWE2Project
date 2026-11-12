@@ -19,6 +19,10 @@ import components.set.Set1L;
  */
 public final class SeatMap1 extends SeatMapSecondary {
 
+    /*
+     * Private members
+     */
+
     /** Number of rows. */
     private int rowCount;
 
@@ -30,8 +34,13 @@ public final class SeatMap1 extends SeatMapSecondary {
 
     /**
      * Creates an empty representation of the requested size.
-     * @param rows positive row count
-     * @param seats positive seats per row
+     *
+     * @param rows
+     *            positive row count
+     *
+     * @param seats
+     *            positive seats per row
+     *
      * @requires rows &gt; 0 and seats &gt; 0 and rows * seats &lt;= Integer.MAX_VALUE
      * @ensures this = (rows, seats, {})
      */
@@ -41,6 +50,10 @@ public final class SeatMap1 extends SeatMapSecondary {
         this.reserved = new Set1L<Integer>();
     }
 
+    /*
+     * Constructors
+     */
+
     /** Creates the initial one-row, one-seat map. */
     public SeatMap1() {
         this.createNewRep(1, 1);
@@ -48,10 +61,16 @@ public final class SeatMap1 extends SeatMapSecondary {
 
     /**
      * Creates an all-available map.
-     * @param rows positive row count
-     * @param seatsPerRow positive number of seats per row
+     *
+     * @param rows
+     *            positive row count
+     *
+     * @param seatsPerRow
+     *            positive number of seats per row
+     *
      * @requires rows &gt; 0 and seatsPerRow &gt; 0 and
      *           rows * seatsPerRow &lt;= Integer.MAX_VALUE
+     *
      * @ensures this = (rows, seatsPerRow, {})
      */
     public SeatMap1(int rows, int seatsPerRow) {
@@ -64,8 +83,13 @@ public final class SeatMap1 extends SeatMapSecondary {
 
     /**
      * Converts coordinates into the private seat number.
-     * @param row one-based row
-     * @param seat one-based seat
+     *
+     * @param row
+     *            one-based row
+     *
+     * @param seat
+     *            one-based seat
+     *
      * @return row-major seat number
      * @requires 1 &lt;= row &lt;= rowCount and 1 &lt;= seat &lt;= seatCount
      * @ensures seatNumber = (row - 1) * seatCount + seat - 1
@@ -75,6 +99,10 @@ public final class SeatMap1 extends SeatMapSecondary {
         assert seat >= 1 && seat <= this.seatCount : "Violation of: valid seat";
         return (row - 1) * this.seatCount + seat - 1;
     }
+
+    /*
+     * Kernel methods
+     */
 
     @Override
     public int rows() {
@@ -104,6 +132,10 @@ public final class SeatMap1 extends SeatMapSecondary {
         assert this.reserved.contains(number) : "Violation of: reserved seat";
         this.reserved.remove(number);
     }
+
+    /*
+     * Standard methods
+     */
 
     @Override
     public void clear() {

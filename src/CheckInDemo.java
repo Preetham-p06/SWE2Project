@@ -10,7 +10,9 @@ public final class CheckInDemo {
 
     /**
      * Processes a group larger than the aircraft capacity.
-     * @param args unused command-line arguments
+     *
+     * @param args
+     *            unused command-line arguments
      */
     public static void main(String[] args) {
         final int rows = 2;

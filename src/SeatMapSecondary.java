@@ -5,6 +5,10 @@ public abstract class SeatMapSecondary implements SeatMap {
     protected SeatMapSecondary() {
     }
 
+    /*
+     * Secondary methods
+     */
+
     @Override
     public final int countAvailable() {
         int count = 0;
@@ -22,6 +26,10 @@ public abstract class SeatMapSecondary implements SeatMap {
     public final boolean isFull() {
         return this.countAvailable() == 0;
     }
+
+    /*
+     * Common methods
+     */
 
     @Override
     public final boolean equals(Object obj) {
