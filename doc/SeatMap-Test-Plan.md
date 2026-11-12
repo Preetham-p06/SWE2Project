@@ -26,3 +26,6 @@ coverage or cross-implementation equality result is claimed.
 
 SeatMapSecondaryTest uses a fresh fixture for each test and separately checks
 query preservation, restored-state hashing, and the full-to-available transition.
+
+See [Testing questions](../test/Q&A.md) for the reasoning behind the fixtures,
+independent expected results, assertion checks, and console output capture.

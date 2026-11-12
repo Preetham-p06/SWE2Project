@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Added answers explaining test design and console verification.
+
 - Added demo justification and possible future extensions.
 
 - Organized the component in the components.seatmap package.
