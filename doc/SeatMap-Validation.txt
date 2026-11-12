@@ -1,0 +1,22 @@
+SeatMap validation — November 12, 2026
+
+Java 21; official OSU components.jar; JUnit 4.13.2; Hamcrest 1.3.
+Command: bash scripts/verify.sh
+Result: exit 0; strict compilation and Javadoc passed.
+Checkstyle 10.21.4, supplied course configuration: no warnings or errors.
+
+JUnit version 4.13.2
+..............................
+Time: 0.012
+
+OK (30 tests)
+
+BookingDemo: PASS
+BookingDemo: PASS
+BookingDemo: PASS
+CheckInDemo: PASS
+Starting audit...
+Audit done.
+
+30 JUnit tests; 682 exhaustive states inside the suite; four console sessions.
+Invalid-call tests verify assertions only. No statement-coverage percentage claimed.

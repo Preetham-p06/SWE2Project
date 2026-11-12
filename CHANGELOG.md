@@ -1,3 +1,21 @@
+# SeatMap changelog
+
+## Unreleased
+
+- Added demo justification and possible future extensions.
+
+- Organized the component in the components.seatmap package.
+- Added focused secondary-method tests and linked the reflection worksheet.
+- Verified 30 JUnit tests, four console sessions, Javadoc, and Checkstyle.
+
+## 1.0.0 — 2026-11-12
+
+- Define kernel and enhanced interfaces with one-based seat contracts.
+- Implement sparse reservations using an OSU Set1L representation.
+- Implement Standard methods, derived queries, and common methods.
+- Add systematic tests, direct booking, and composed check-in examples.
+- Add repeatable verification scripts and project documentation.
+
 # Changelog
 
 All notable changes to this project will be documented in this file.

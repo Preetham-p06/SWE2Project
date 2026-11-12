@@ -1,89 +1,79 @@
-# Portfolio Project
+# SeatMap
 
-The purpose of this repo is to provide a framework for creating your own
-component in the software sequence discipline. If you were unsure whether
-or not to make your own, consider the following testimonial:
+SeatMap tracks reserved seats on an aircraft. Each coordinate is a one-based
+row and seat number. The project follows the OSU component structure:
 
-> I really enjoyed the portfolio project! It gave me a stronger understanding
-> of the OSU software discipline while also giving me the flexibility to
-> design something that reflected my interests. This made the experience
-> rewarding and enjoyable as I created a product I was proud of!
+| File | Responsibility |
+| --- | --- |
+| SeatMapKernel | Primitive operations and Standard inheritance |
+| SeatMap | Additional queries |
+| SeatMapSecondary | Derived queries and common methods |
+| SeatMap1 | OSU Set representation, constructors, kernel and Standard methods |
 
-## Recommended Steps to Get Started
+The component lives in `src/components/seatmap`, with demo programs in `src`
+and tests in `test`. The code uses explicit loops, assertion preconditions,
+and JavaDoc contracts. Passenger information, payment, and a graphical
+interface are outside the component's scope.
 
-When starting your portfolio project, the following steps should make your life
-a bit easier.
+## Setup and testing
 
-### Step 1: Create a Repo From This Template
+Install a Java 21 JDK, Python 3, Bash, and curl. Then run from this folder:
 
-<!-- TODO: use GitHub to create a repo from this template -->
+```bash
+bash scripts/setup.sh
+bash scripts/verify.sh
+```
 
-Assuming you're reading this README from GitHub, you can make use of this
-repo by clicking the `Use this template` button in the top-right corner of
-this page. If you can't find the button, [this link][use-this-template]
-should work as well. Personally, I would recommend using the
-`Create a new repository` option, which will allow you to name the
-repository after your component. Given that you will be submitting pull
-requests to me through Carmen, you'll want to make sure your repository
-is public. Then, you can click `Create repository`. After that, you can
-go through all the usual steps of cloning a repository on your system to
-get to work. I use GitHub Desktop to clone projects, and it has a nice
-feature of letting you open a repo directly in VSCode from the
-`Repository` menu.
+Setup downloads the official components.jar, JUnit 4.13.2, and Hamcrest 1.3,
+and checks their SHA-256 digests. Jars and compiled files are ignored by Git.
+Verification compiles all sources with warnings treated as errors, runs 30
+JUnit tests and four console sessions, and generates `bin/javadoc/index.html`.
 
-### Step 2: Install Recommended Plugins
+To run Checkstyle 10.21.4 with the supplied course configuration:
 
-<!-- TODO: install recommended plugins and delete this comment -->
+```bash
+CHECKSTYLE_JAR=/absolute/path/checkstyle-10.21.4-all.jar bash scripts/check-style.sh
+```
 
-When you open VSCode with this project, you should get a notification in the
-bottom right corner that there are some recommended extensions to install.
-Click install all. If you ignored this message or it never came up, feel free
-to press CTRL+SHIFT+P and type "Show Recommended Extensions". Install all of the
-extensions listed.
+The script rejects warnings as well as errors. Test fixture literals have a
+documented MagicNumber exception using the course configuration's filter.
 
-### Step 3: Install the Latest JDK
+## Examples
 
-<!-- TODO: install latest JDK and delete this comment -->
+```bash
+java -ea -cp "bin:lib/*" BookingDemo
+java -ea -cp "bin:lib/*" CheckInDemo
+```
 
-If you do not have an available JDK on your system, you may be prompted to
-install one by VSCode. The default seems to be Red Hat's OpenJDK, which seems to
-require you to register for an account or to install on the command line.
-Regardless, there is no mac support. As a result, I would just recommend
-installing the latest JDK [directly from Oracle's site][jdk-downloads].
+On Windows replace `bin:lib/*` with `bin;lib/*`.
 
-### Step 4: Add Key Libraries to Project
+BookingDemo accepts `reserve ROW SEAT`, `release ROW SEAT`, `show`, and `quit`.
+`O` means available and `X` means reserved. CheckInDemo shows a separate
+FlightCheckIn object assigning six seats and rejecting a seventh passenger.
 
-<!-- TODO: add key libraries to project and delete this comment -->
+## Contracts
 
-As you are probably all aware at this point, you need the components jar to get
-anything running. My advice is to [download it from here][components-jar]. Then,
-drop it into the `lib` folder in the project. Git automatically ignores anything
-you put here by default, so don't worry about committing it to version control.
+Both dimensions are positive and their product fits in an int. Reserving
+requires an available valid seat; releasing requires a reserved valid seat.
+The caller checks these conditions. Assertions provide development diagnostics.
+`clear()` restores a 1-by-1 empty map. `newInstance()` returns a fresh default
+map. `transferFrom()` moves all state from a distinct object of the same
+dynamic type, then resets that source. Dimensions need not match.
 
-Similarly, you will need the testing APIs (e.g., JUnit). Perhaps the easiest way
-to include them in your project is to click the beaker symbol in the left
-sidebar; it's right below the extensions button which looks like four squares.
-If you do not see this button, try creating a Java file in `src`. From there,
-you can click "Enable Java Tests" and then click "JUnit" from the
-dropdown. That's it! You should now see the two JUnit libraries in the lib
-folder.
+The representation is sparse. Queries such as counting, equality, hashing,
+and display scan every seat and should not be used on billion-seat layouts.
 
-**Note**: if you're using VSCode for class projects, you might be wondering
-why you never had to do this. In general, it's bad practice to commit binaries
-to version control. However, we have no way of managing dependencies with the
-custom `components.jar`, so I included them directly in the template. I did not
-include them here, so you could see how it might be done from scratch. If at any
-point you're struggling with Step 3, just copy the lib folder from the monorepo
-template.
+## Documentation
 
-## Next Steps
+- [Design](doc/SeatMap-Design.md)
+- [Test plan](doc/SeatMap-Test-Plan.md)
+- [Use cases](doc/SeatMap-Use-Cases.md)
+- [Demo justification](src/DemoJustification.md)
+- [Future ideas](doc/FUTUREIDEAS.md)
+- [Reflection](doc/SeatMap-Reflection.md)
+- [Rubric checklist](doc/SeatMap-Checklist.md)
+- [Validation results](doc/SeatMap-Validation.txt)
 
-<!-- TODO: navigate to doc/DIRECTIONS.md and delete this comment -->
-
-Now that you have everything setup, you can begin crafting your component. All
-of the directions you need to get started are in the
-[DIRECTIONS.md](doc\DIRECTIONS.md) file under the docs folder.
-
-[components-jar]: https://cse22x1.engineering.osu.edu/common/components.jar
-[jdk-downloads]: https://www.oracle.com/java/technologies/downloads/
-[use-this-template]: https://github.com/new?template_name=portfolio-project&template_owner=jrg94
+The original template instructions remain under doc. Current DIRECTIONS.md
+supersedes the old per-part submission workflow. Keep the submission PR open
+and unmerged so main retains the original template.
