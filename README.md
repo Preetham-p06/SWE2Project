@@ -7,7 +7,8 @@ or not to make your own, consider the following testimonial:
 > I really enjoyed the portfolio project! It gave me a stronger understanding
 > of the OSU software discipline while also giving me the flexibility to
 > design something that reflected my interests. This made the experience
-> rewarding and enjoyable as I created a product I was proud of!
+> rewarding and enjoyable as I created a product that showed off one of my
+> intrests which is Avaition -> more speficially gateAI
 
 ## Recommended Steps to Get Started
 
