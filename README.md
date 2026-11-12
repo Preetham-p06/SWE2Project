@@ -68,6 +68,8 @@ and display scan every seat and should not be used on billion-seat layouts.
 - [Design](doc/SeatMap-Design.md)
 - [Test plan](doc/SeatMap-Test-Plan.md)
 - [Use cases](doc/SeatMap-Use-Cases.md)
+- [Demo justification](src/DemoJustification.md)
+- [Future ideas](doc/FUTUREIDEAS.md)
 - [Reflection](doc/SeatMap-Reflection.md)
 - [Rubric checklist](doc/SeatMap-Checklist.md)
 - [Validation results](doc/SeatMap-Validation.txt)

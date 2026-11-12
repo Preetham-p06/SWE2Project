@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Added demo justification and possible future extensions.
+
 - Organized the component in the components.seatmap package.
 - Added focused secondary-method tests and linked the reflection worksheet.
 - Verified 30 JUnit tests, four console sessions, Javadoc, and Checkstyle.
