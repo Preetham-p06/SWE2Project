@@ -6,10 +6,10 @@ Result: exit 0; strict compilation and Javadoc passed.
 Checkstyle 10.21.4, supplied course configuration: no warnings or errors.
 
 JUnit version 4.13.2
-...........................
-Time: 0.011
+..............................
+Time: 0.012
 
-OK (27 tests)
+OK (30 tests)
 
 BookingDemo: PASS
 BookingDemo: PASS
@@ -18,5 +18,5 @@ CheckInDemo: PASS
 Starting audit...
 Audit done.
 
-27 JUnit tests; 682 exhaustive states inside the suite; four console sessions.
+30 JUnit tests; 682 exhaustive states inside the suite; four console sessions.
 Invalid-call tests verify assertions only. No statement-coverage percentage claimed.

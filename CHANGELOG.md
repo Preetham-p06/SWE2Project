@@ -1,5 +1,11 @@
 # SeatMap changelog
 
+## Unreleased
+
+- Organized the component in the components.seatmap package.
+- Added focused secondary-method tests and linked the reflection worksheet.
+- Verified 30 JUnit tests, four console sessions, Javadoc, and Checkstyle.
+
 ## 1.0.0 — 2026-11-12
 
 - Define kernel and enhanced interfaces with one-based seat contracts.

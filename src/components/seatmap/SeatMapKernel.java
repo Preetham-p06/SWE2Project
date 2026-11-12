@@ -1,3 +1,5 @@
+package components.seatmap;
+
 import components.standard.Standard;
 
 /**

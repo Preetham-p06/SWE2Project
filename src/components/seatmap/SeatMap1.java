@@ -1,3 +1,5 @@
+package components.seatmap;
+
 import components.set.Set;
 import components.set.Set1L;
 
@@ -94,6 +96,33 @@ public final class SeatMap1 extends SeatMapSecondary {
     }
 
     /*
+     * Standard methods
+     */
+
+    @Override
+    public void clear() {
+        this.createNewRep(1, 1);
+    }
+
+    @Override
+    public SeatMap newInstance() {
+        return new SeatMap1();
+    }
+
+    @Override
+    public void transferFrom(SeatMap source) {
+        assert source != null : "Violation of: source /= null";
+        assert source != this : "Violation of: source /= this";
+        assert source.getClass() == this.getClass()
+                : "Violation of: matching dynamic types";
+        SeatMap1 localSource = (SeatMap1) source;
+        this.rowCount = localSource.rowCount;
+        this.seatCount = localSource.seatCount;
+        this.reserved = localSource.reserved;
+        localSource.createNewRep(1, 1);
+    }
+
+    /*
      * Kernel methods
      */
 
@@ -126,30 +155,4 @@ public final class SeatMap1 extends SeatMapSecondary {
         this.reserved.remove(number);
     }
 
-    /*
-     * Standard methods
-     */
-
-    @Override
-    public void clear() {
-        this.createNewRep(1, 1);
-    }
-
-    @Override
-    public SeatMap newInstance() {
-        return new SeatMap1();
-    }
-
-    @Override
-    public void transferFrom(SeatMap source) {
-        assert source != null : "Violation of: source /= null";
-        assert source != this : "Violation of: source /= this";
-        assert source.getClass() == this.getClass()
-                : "Violation of: matching dynamic types";
-        SeatMap1 localSource = (SeatMap1) source;
-        this.rowCount = localSource.rowCount;
-        this.seatCount = localSource.seatCount;
-        this.reserved = localSource.reserved;
-        localSource.createNewRep(1, 1);
-    }
 }

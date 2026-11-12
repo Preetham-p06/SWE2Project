@@ -3,6 +3,9 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+import components.seatmap.SeatMap;
+import components.seatmap.SeatMap1;
+
 /** Sparse capacity boundaries and implementation assertion diagnostics. */
 public final class SeatMap1BoundaryTest {
     /** Checks a maximum-size dimension without a full-map traversal. */

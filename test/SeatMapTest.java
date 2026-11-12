@@ -5,6 +5,8 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+import components.seatmap.SeatMap;
+
 /** Contract tests shared by implementations of SeatMap. */
 // Literal values identify test fixtures and expected results.
 // SUPPRESS CHECKSTYLE MagicNumber FOR NEXT 500 LINES

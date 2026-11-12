@@ -1,3 +1,5 @@
+import components.seatmap.SeatMap;
+import components.seatmap.SeatMap1;
 /**
  * A check-in service that uses SeatMap as its private representation.
  * Clients ask for an assignment without selecting coordinates.

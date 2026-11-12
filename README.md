@@ -10,7 +10,8 @@ row and seat number. The project follows the OSU component structure:
 | SeatMapSecondary | Derived queries and common methods |
 | SeatMap1 | OSU Set representation, constructors, kernel and Standard methods |
 
-The code uses a flat src/test layout, explicit loops, assertion preconditions,
+The component lives in `src/components/seatmap`, with demo programs in `src`
+and tests in `test`. The code uses explicit loops, assertion preconditions,
 and JavaDoc contracts. Passenger information, payment, and a graphical
 interface are outside the component's scope.
 
@@ -25,7 +26,7 @@ bash scripts/verify.sh
 
 Setup downloads the official components.jar, JUnit 4.13.2, and Hamcrest 1.3,
 and checks their SHA-256 digests. Jars and compiled files are ignored by Git.
-Verification compiles all sources with warnings treated as errors, runs 27
+Verification compiles all sources with warnings treated as errors, runs 30
 JUnit tests and four console sessions, and generates `bin/javadoc/index.html`.
 
 To run Checkstyle 10.21.4 with the supplied course configuration:

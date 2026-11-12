@@ -1,3 +1,5 @@
+package components.seatmap;
+
 /** Secondary operations implemented using only kernel methods. */
 public abstract class SeatMapSecondary implements SeatMap {
 

@@ -3,6 +3,9 @@ import java.util.Scanner;
 import components.simplewriter.SimpleWriter;
 import components.simplewriter.SimpleWriter1L;
 
+import components.seatmap.SeatMap;
+import components.seatmap.SeatMap1;
+
 /** Direct use of SeatMap for choosing and canceling individual seats. */
 public final class BookingDemo {
 

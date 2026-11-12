@@ -1,6 +1,7 @@
 import components.simplewriter.SimpleWriter;
 import components.simplewriter.SimpleWriter1L;
 
+
 /** Demonstrates automatic assignment through a service containing SeatMap. */
 public final class CheckInDemo {
 

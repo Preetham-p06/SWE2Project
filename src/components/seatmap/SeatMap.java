@@ -1,3 +1,5 @@
+package components.seatmap;
+
 /**
  * Enhanced interface for SeatMap. Inherits the kernel mathematical model.
  */

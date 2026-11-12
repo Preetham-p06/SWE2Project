@@ -1,5 +1,8 @@
 # Portfolio Part 6: Finishing Touches
 
+Completed project documents: [reflection](../SeatMap-Reflection.md),
+[test plan](../SeatMap-Test-Plan.md), and [use cases](../SeatMap-Use-Cases.md).
+
 - **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
 - **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
 - **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->

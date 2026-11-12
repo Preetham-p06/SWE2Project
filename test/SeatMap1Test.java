@@ -3,6 +3,9 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+import components.seatmap.SeatMap;
+import components.seatmap.SeatMap1;
+
 /** Runs the contract tests on SeatMap1. */
 public final class SeatMap1Test extends SeatMapTest {
     @Override

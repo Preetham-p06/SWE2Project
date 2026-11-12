@@ -1,7 +1,7 @@
 # Test plan
 
 Run `bash scripts/verify.sh` with assertions enabled (the script sets -ea).
-There are 27 JUnit tests. SeatMapTest is an abstract reusable suite and
+There are 30 JUnit tests. SeatMapTest is an abstract reusable suite and
 SeatMap1Test supplies its constructor factory.
 
 | Area | Cases |
@@ -23,3 +23,6 @@ they are scenarios in a test, not 682 separately counted JUnit tests.
 Assertions on invalid kernel calls test implementation diagnostics, not a
 public guarantee for calls outside the preconditions. No numerical code
 coverage or cross-implementation equality result is claimed.
+
+SeatMapSecondaryTest uses a fresh fixture for each test and separately checks
+query preservation, restored-state hashing, and the full-to-available transition.

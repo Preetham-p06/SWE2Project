@@ -48,7 +48,7 @@ maps, but intentionally not optimized for huge dimensions.
 ## Reference conventions
 
 The ExposureAssist repository supplied a formatting and organization example:
-flat source layout, separate kernel/enhanced interfaces, a secondary class,
+a component package, separate kernel/enhanced interfaces, a secondary class,
 assertion checks, explicit loops, and short contracts. SeatMap follows those
 conventions while retaining the common methods required by its own rubric.
 It does not reuse the reference's exposure calculations or source text.
