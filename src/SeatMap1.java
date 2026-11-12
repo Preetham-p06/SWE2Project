@@ -37,10 +37,8 @@ public final class SeatMap1 extends SeatMapSecondary {
      *
      * @param rows
      *            positive row count
-     *
      * @param seats
      *            positive seats per row
-     *
      * @requires rows &gt; 0 and seats &gt; 0 and rows * seats &lt;= Integer.MAX_VALUE
      * @ensures this = (rows, seats, {})
      */
@@ -64,13 +62,10 @@ public final class SeatMap1 extends SeatMapSecondary {
      *
      * @param rows
      *            positive row count
-     *
      * @param seatsPerRow
      *            positive number of seats per row
-     *
      * @requires rows &gt; 0 and seatsPerRow &gt; 0 and
      *           rows * seatsPerRow &lt;= Integer.MAX_VALUE
-     *
      * @ensures this = (rows, seatsPerRow, {})
      */
     public SeatMap1(int rows, int seatsPerRow) {
@@ -86,10 +81,8 @@ public final class SeatMap1 extends SeatMapSecondary {
      *
      * @param row
      *            one-based row
-     *
      * @param seat
      *            one-based seat
-     *
      * @return row-major seat number
      * @requires 1 &lt;= row &lt;= rowCount and 1 &lt;= seat &lt;= seatCount
      * @ensures seatNumber = (row - 1) * seatCount + seat - 1

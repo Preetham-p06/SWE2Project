@@ -20,7 +20,6 @@ import components.standard.Standard;
  *     rows * seatsPerRow &lt;= 2147483647
  *   ensures this = (rows, seatsPerRow, {})
  * </pre>
- *
  * <p>Every implementation provides both constructors. Standard operations use
  * the no-argument initial value. Thus clear resets to (1, 1, {}), newInstance
  * returns a fresh initial object of the same dynamic type, and transferFrom
@@ -52,10 +51,8 @@ public interface SeatMapKernel extends Standard<SeatMap> {
      *
      * @param row
      *            one-based row number
-     *
      * @param seat
      *            one-based seat number
-     *
      * @return true exactly when the seat is available
      * @requires 1 &lt;= row &lt;= this.rows and 1 &lt;= seat &lt;= this.seatsPerRow
      * @ensures isAvailable = ((row, seat) is not in this.reserved)
@@ -68,13 +65,11 @@ public interface SeatMapKernel extends Standard<SeatMap> {
      *
      * @param row
      *            one-based row number
-     *
      * @param seat
      *            one-based seat number
      * @updates this
      * @requires 1 &lt;= row &lt;= this.rows and 1 &lt;= seat &lt;= this.seatsPerRow
      *           and (row, seat) is not in this.reserved
-     *
      * @ensures this = (#this.rows, #this.seatsPerRow,
      *                 #this.reserved union {(row, seat)})
      */
@@ -85,13 +80,11 @@ public interface SeatMapKernel extends Standard<SeatMap> {
      *
      * @param row
      *            one-based row number
-     *
      * @param seat
      *            one-based seat number
      * @updates this
      * @requires 1 &lt;= row &lt;= this.rows and 1 &lt;= seat &lt;= this.seatsPerRow
      *           and (row, seat) is in this.reserved
-     *
      * @ensures this = (#this.rows, #this.seatsPerRow,
      *                 #this.reserved minus {(row, seat)})
      */

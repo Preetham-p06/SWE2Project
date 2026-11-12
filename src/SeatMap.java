@@ -1,4 +1,6 @@
-/** Enhanced interface for SeatMap. Inherits the kernel mathematical model. */
+/**
+ * Enhanced interface for SeatMap. Inherits the kernel mathematical model.
+ */
 public interface SeatMap extends SeatMapKernel {
 
     /**

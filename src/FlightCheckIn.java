@@ -12,10 +12,8 @@ public final class FlightCheckIn {
      *
      * @param rows
      *            positive row count
-     *
      * @param seatsPerRow
      *            positive seats per row
-     *
      * @requires rows > 0 and seatsPerRow > 0 and
      *           rows * seatsPerRow &lt;= Integer.MAX_VALUE
      */
