@@ -37,7 +37,10 @@ public final class FlightCheckIn {
         return assigned;
     }
 
-    /** @return the number of passengers who can still be assigned seats */
+    /**
+     * Reports how many assignments remain possible.
+     * @return the number of passengers who can still be assigned seats
+     */
     public int remainingSeats() {
         return this.layout.countAvailable();
     }

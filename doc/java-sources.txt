@@ -1,0 +1,11 @@
+src/BookingDemo.java
+src/CheckInDemo.java
+src/FlightCheckIn.java
+src/SeatMap.java
+src/SeatMap1.java
+src/SeatMapKernel.java
+src/SeatMapSecondary.java
+test/FlightCheckInTest.java
+test/SeatMap1BoundaryTest.java
+test/SeatMap1Test.java
+test/SeatMapTest.java
