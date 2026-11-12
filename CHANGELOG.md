@@ -1,3 +1,13 @@
+# SeatMap changelog
+
+## 1.0.0 — 2026-11-12
+
+- Define kernel and enhanced interfaces with one-based seat contracts.
+- Implement sparse reservations using an OSU Set1L representation.
+- Implement Standard methods, derived queries, and common methods.
+- Add systematic tests, direct booking, and composed check-in examples.
+- Add repeatable verification scripts and project documentation.
+
 # Changelog
 
 All notable changes to this project will be documented in this file.
